@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relationship Request v1.0</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #0d1117;
+        color: #fff;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: auto;
+        background: #161b22;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,255,100,0.3);
+    }
+
+    h1 {
+        color: #58a6ff;
+    }
+
+    .ticket {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+    }
+
+    button {
+        margin-top: 25px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        background: #238636;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #2ea043;
+    }
+
+    #result {
+        margin-top: 25px;
+        display: none;
+        padding: 20px;
+        background: #21262d;
+        border-radius: 10px;
+    }
+
+    .heart {
+        color: red;
+        font-size: 30px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>💻 Relationship Upgrade Request v1.0</h1>
+
+    <p>
+        Dear Beautiful Human,<br><br>
+
+        After extensive testing, debugging, and performance analysis,
+        I have concluded that my life runs better when you're in it.
+        Therefore, I am raising a Change Request for our first date. ❤️
+    </p>
+
+    <div class="ticket">
+
+        <label>Select Preferred Date</label>
+        <input type="date" id="date">
+
+        <label>Select Preferred Time</label>
+        <input type="time" id="time">
+
+        <label>Select Your Favorite Meal</label>
+        <select id="meal">
+            <option>Pizza 🍕</option>
+            <option>Burger 🍔</option>
+            <option>Pasta 🍝</option>
+            <option>Chinese 🍜</option>
+            <option>Coffee & Snacks ☕</option>
+            <option>Anything with You ❤️</option>
+        </select>
+
+        <label>Preferred Date Type</label>
+        <select id="mood">
+            <option>Romantic Dinner 🌹</option>
+            <option>Coffee Date ☕</option>
+            <option>Movie Date 🎬</option>
+            <option>Long Drive 🚗</option>
+            <option>Walk & Talk 🌙</option>
+        </select>
+
+        <button onclick="submitRequest()">
+            🚀 Deploy Relationship Request
+        </button>
+
+    </div>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+function submitRequest() {
+
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const meal = document.getElementById("meal").value;
+    const mood = document.getElementById("mood").value;
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("result").innerHTML =
+    `
+    <h2>✅ Request Successfully Submitted</h2>
+
+    <p>
+    Ticket ID: DATE-${Math.floor(Math.random()*9999)}
+    </p>
+
+    <p>
+    <b>Date:</b> ${date}<br>
+    <b>Time:</b> ${time}<br>
+    <b>Meal:</b> ${meal}<br>
+    <b>Date Type:</b> ${mood}
+    </p>
+
+    <h3>
+    Final Question:
+    </h3>
+
+    <p>
+    Would you allow me to be your favorite notification forever?
+    </p>
+
+    <h1 class="heart">❤️</h1>
+
+    <p>
+    Status: Awaiting Approval from the Most Important User.
+    </p>
+    `;
+}
+</script>
+
+</body>
+</html>
